@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  @media (max-width: 1080px) {
+    font-size: 93.75%;
+  }
+
+  @media (max-width: 720px) {
+    font-size: 85.5%;
+  }
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+}
+
+button {
+  cursor: pointer;
+}
+
+button,
+input,
+textarea {
+  font-family: "Roboto", sans-serif;
+}
+
+.App {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 1.5rem;
+}
+
+.textarea-container {
+  width: 100%;
+  max-width: 700px;
+  position: relative;
+  height: 300px;
+  border: 1px solid #ccc;
+  display: grid;
+  grid-template-columns: 1fr 160px;
+
+  overflow: hidden;
+
+  .textarea {
+    width: 100%;
+    height: 298px;
+    overflow: auto;
+    padding: 1rem;
+    font-size: 0.85rem;
+    outline: none;
+  
+
+    div {
+     overflow: visible;
+     margin: 0;
+    }
+
+    p {
+      white-space: nowrap;
+      line-height: 22px;
+    }
+    
+    span {
+      width: max-content;
+      line-height: 22px;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    b {
+      font-size: 0.70rem;
+      width: max-content;
+      padding: 2px 4px;
+      position: relative;
+      top: -1px;
+
+      line-height: 18px;
+     
+      background-color: #ebebeb;
+      border-radius: 3px;
+    }
+  }
+
+  .param {
+    width: max-content;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 0.5rem;
+  }
+
+  button {
+  }
+
+  .params-list {
+    height: 300px;
+    border: 1px solid #ccc;
+    display: grid;
+    grid-template-rows: 40px 218px 40px;
+
+    span {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: azure;
+    }
+
+    ul {
+      list-style: none;
+      overflow-y: scroll;
+      height: 218px;
+
+      //Custom scrollbar
+      &::-webkit-scrollbar {
+        width: 3px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: #888;
+      }
+
+      &::-webkit-scrollbar-thumb:hover {
+        background: #555;
+      }
+
+      li {
+        padding: 10px;
+        cursor: pointer;
+        font-size: 0.75rem;
+
+        &.active {
+          background-color: #e6edf5;
+        }
+
+        &:hover:not(.active) {
+          background-color: #f5f5f5;
+        }
+      }
+    }
+
+    button {
+      border: 0;
+      background: cornflowerblue;
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-weight: bold;
+
+      &:disabled {
+        background: #ccc;
+        cursor: not-allowed;
+      }
+    }
+  }
+}
+
+.resultText {
+  width: 100%;
+  max-width: 700px;
+}
